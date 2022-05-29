@@ -1,33 +1,33 @@
 <script>
   import { createEventDispatcher } from "svelte";
-  import { onMount } from 'svelte';
+  import { onMount } from "svelte";
 
   const dispatch = createEventDispatcher();
   export let isOpen = false;
   // by default Drawer opens from right. Make left-0 for left opening
-  export let placement = 'right-0'
+  export let placement = "right-0";
   // max size of content section
-  export let maxScreenSize = 'max-w-lg'
-  
+  export let maxScreenSize = "max-w-lg";
+
   const handleClickAway = () => {
     dispatch("clickAway");
     isOpen = !isOpen;
   };
-  
+
   let mounted = false;
-  // scrolllock for content underneath drawer
+  // scrolllock for content underneath
   function scrollLock(isOpen) {
-  if (mounted) {
-    const body = document.querySelector('body');
-    body.style.overflow = isOpen ? 'hidden' : 'auto';
+    if (mounted) {
+      const body = document.querySelector("body");
+      body.style.overflow = isOpen ? "hidden" : "auto";
+    }
   }
-}
-$: scrollLock(isOpen);
+  $: scrollLock(isOpen);
 
   onMount(() => {
-  mounted = true;
-  scrollLock(open);
-});
+    mounted = true;
+    scrollLock(open);
+  });
 </script>
 
 <aside>
@@ -37,7 +37,7 @@ $: scrollLock(isOpen);
       : 'invisible'}"
   >
     <div
-      class="w-screen h-full bg-gray-500 cursor-pointer duration-500 transition-opacity overflow-hidden  {isOpen
+      class="w-screen h-full bg-gray-500 cursor-pointer duration-500 transition-opacity overflow-hidden {isOpen
         ? 'opacity-50'
         : 'opacity-0'}"
       on:click={handleClickAway}
