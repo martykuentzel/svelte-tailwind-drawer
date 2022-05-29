@@ -1,5 +1,5 @@
 # Svelte Tailwind Drawer
-A simple svelte Drawer component build with vanilla Tailwind
+A simple svelte Drawer component build with vanilla Tailwindcss
 
 [Check out the demo](https://svelte.dev/repl/cecaf37f087541da80488480c7371b66?version=3.48.0)
 
