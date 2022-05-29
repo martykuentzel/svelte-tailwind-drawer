@@ -9,10 +9,10 @@ Features
 - Placement left or right
 - Customizable max-screen-size
 - Lock body scrolling when open
-- and most importanly: very simple!
+- and most importanly: __very simple__!
 
 ## Usage
-No package bullshit - just copy paste the ~50 lines of `Drawer.svelte` code into your svelte project and you are fine :)
+No package bullshit - just copy paste the ~50 lines from `src/lib/ui/Drawer.svelte` code into your svelte project and you are good to go
   
 Call it via
 ```
@@ -31,7 +31,7 @@ Call it via
 </Drawer>
 ```
 
-Open and Olose state must be handled via User. For easy usage propgate the state through your components via dispatcher. If the project gets more complicated I recommand handling the state via svelte stores.
+Open and Close state must be handled via the User. For easy usage propgate the state through your components via dispatcher. If the project gets more complicated I recommand handling the state via svelte stores.
 
 ## Build with
 
@@ -46,4 +46,4 @@ tailwindcss: 3.0.24
 |---------------|----------|-------------------------------------------------|
 | isOpen        | false    | Two-way binding for open state of the component |
 | placement     | right-0    | Side of screen to slide out from                |
-| maxScreenSize | max-w-lg | Max Panel size (see [tailwindcss.com/docs/max-width](tailwindcss.com/docs/max-width)  |
+| maxScreenSize | max-w-lg | Max Panel size (see [tailwindcss.com/docs/max-width](tailwindcss.com/docs/max-width))  |
