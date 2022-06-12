@@ -26,7 +26,7 @@
 
   onMount(() => {
     mounted = true;
-    scrollLock(open);
+    scrollLock(isOpen);
   });
 </script>
 
